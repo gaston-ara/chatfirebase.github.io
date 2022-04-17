@@ -10,7 +10,7 @@ const Chat = () => {
   const [userEmail, setUserEmail] = useState('')
   const [userPhoto, setUserPhoto] = useState('')
   const [userUid, setUserUid] = useState('')
-  
+
   const handleAuth = async (e) => {
     e.preventDefault()
     const googleProvider = new GoogleAuthProvider();
@@ -26,18 +26,18 @@ const Chat = () => {
     await signIn(googleProvider)
   }
   const handleUserStateChanged = (user) => {
-  if (user) {
-    setUser(user)
-    setUserName(user.displayName)
-    setUserEmail(user.email)
-    setUserPhoto(user.photoURL)
-    setUserUid(user.uid)
-    setLogged(true)
-    console.log(user.displayName);
-    console.log(logged);
-  } else {
-    setLogged(false)
-  }
+    if (user) {
+      setUser(user)
+      setUserName(user.displayName)
+      setUserEmail(user.email)
+      setUserPhoto(user.photoURL)
+      setUserUid(user.uid)
+      setLogged(true)
+      console.log(user.displayName);
+      console.log(logged);
+    } else {
+      setLogged(false)
+    }
   }
 
   useEffect(() => {
@@ -47,18 +47,12 @@ const Chat = () => {
 
   return (
     <>
-    {logged? (
-      <>
-      <ChatContainer userName={userName}/><a href="https://facebook.com">Link de Noelia</a>
-      </>
-      
-    ):(
-      <button className='btn' onClick={(e) => handleAuth(e)}>Iniciar sesión con Google</button>
-    )}
-      
-      
+      {logged ? (
+        <ChatContainer userName={userName} />
+      ) : (
+        <button className='btn' onClick={(e) => handleAuth(e)}>Iniciar sesión con Google</button>
+      )}
     </>
-
   )
 }
 
