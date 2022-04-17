@@ -32,7 +32,7 @@ const Chat = () => {
     setUserEmail(user.email)
     setUserPhoto(user.photoURL)
     setUserUid(user.uid)
-    setLogged(!logged)
+    setLogged(true)
     console.log(user.displayName);
     console.log(logged);
   } else {
@@ -48,7 +48,10 @@ const Chat = () => {
   return (
     <>
     {logged? (
-      <ChatContainer userName={userName}/>
+      <>
+      <ChatContainer userName={userName}/><a href="https://facebook.com">Link de Noelia</a>
+      </>
+      
     ):(
       <button className='btn' onClick={(e) => handleAuth(e)}>Iniciar sesión con Google</button>
     )}
