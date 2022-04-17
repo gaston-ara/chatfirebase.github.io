@@ -24,7 +24,7 @@
   overflow-y: scroll;
   align-content: stretch;
 }
-.message{
+.my-message{
   position: relative;
   display: flex;
   flex-direction: row;
@@ -37,6 +37,27 @@
   border-radius: 10px;
   width: 70vw;
   max-width: 400px;
+  height: auto;
+}
+.message{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(94, 94, 94);
+  background-color: rgb(242, 242, 242);
+  border-radius: 10px;
+  width: 70vw;
+  max-width: 400px;
+  place-self: flex-start;
+}
+.my-message p{
+    overflow-wrap: break-word;  
+    max-width: 320px;
+    margin: 5px
 }
 .time-message{
   position: absolute;
@@ -52,7 +73,7 @@
   left: 7px;
   font-weight: bold;
   font-size: 9px;
-  color: rgb(20, 86, 14);
+  color: rgb(62, 62, 62);
 }
 .form{
   width: 90%;
@@ -70,6 +91,18 @@
 .btn{
   display: inline;
   width: 17%;
+  height: 50px;
+  border: 1px solid rgb(94, 94, 94);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0px 5px 5px;
+  float: right;
+  background-color: rgb(89, 133, 255);
+  color: whitesmoke;
+}
+.btn-login{
+  display: inline;
+  width: 30%;
   height: 50px;
   border: 1px solid rgb(94, 94, 94);
   border-radius: 5px;

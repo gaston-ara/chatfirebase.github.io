@@ -50,7 +50,12 @@ const Chat = () => {
       {logged ? (
         <ChatContainer userName={userName} />
       ) : (
-        <button className='btn' onClick={(e) => handleAuth(e)}>Iniciar sesión con Google</button>
+        <>
+        <h1>El chat de Gastón</h1>
+        <br />
+        <br />
+        <button className='btn-login' onClick={(e) => handleAuth(e)}>Iniciar sesión con Google</button>
+        </>
       )}
     </>
   )
