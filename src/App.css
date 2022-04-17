@@ -56,13 +56,13 @@
 }
 .my-message p{
     overflow-wrap: break-word;  
-    max-width: 320px;
-    margin: 5px
+    max-width: 100%;
+    margin: 5px;
 }
 .message p{
     overflow-wrap: break-word;  
-    max-width: 320px;
-    margin: 5px
+    max-width: 100%;
+    margin: 5px;
 }
 .time-message{
   position: absolute;
