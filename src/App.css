@@ -59,6 +59,11 @@
     max-width: 320px;
     margin: 5px
 }
+.message p{
+    overflow-wrap: break-word;  
+    max-width: 320px;
+    margin: 5px
+}
 .time-message{
   position: absolute;
   bottom: 3px;
