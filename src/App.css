@@ -107,8 +107,9 @@
 }
 .btn-login{
   display: inline;
-  width: 30%;
-  height: 50px;
+  min-width: fit-content;
+  width: 20%;
+  height: fit-content;
   border: 1px solid rgb(94, 94, 94);
   border-radius: 5px;
   padding: 5px;
@@ -116,4 +117,7 @@
   float: right;
   background-color: rgb(89, 133, 255);
   color: whitesmoke;
+}
+.title{
+  text-align: center;
 }

@@ -51,7 +51,7 @@ const Chat = () => {
         <ChatContainer userName={userName} />
       ) : (
         <>
-        <h1>El chat de Gastón y Shirley</h1>
+        <h2 className='title'>El chat de Gastón y Shirley</h2>
         <br />
         <br />
         <button className='btn-login' onClick={(e) => handleAuth(e)}>Iniciar sesión con Google</button>
