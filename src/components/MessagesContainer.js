@@ -3,7 +3,7 @@ import Message from './Message'
 
 const MessagesContainer = (props) => {
  const utcToLocalTime = (utc) => {
-  return new Date(utc).getHours() + ':' + String(new Date(utc).getMinutes()).padStart(2, '0') + ':' + String(new Date(utc).getSeconds()).padStart(2, '0');
+  return new Date(utc).getHours() + ':' + String(new Date(utc).getMinutes()).padStart(2, '0');
  }
   return (
     <div className="messages-container">
