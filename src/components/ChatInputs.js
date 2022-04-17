@@ -5,7 +5,7 @@ const ChatInputs = (props) => {
     <>
     <form className='form' onSubmit={(e) => props.handleSubmit(e)}>
         <input className='enter-message' value={props.message} type="text" placeholder="Escribe tu mensaje..." onChange={(e) => props.setMessage(e.target.value)}/>
-        <button className='btn' type="submit">Send</button>
+        <button className='btn' type="submit">Enviar</button>
     </form>
     </>
   )
