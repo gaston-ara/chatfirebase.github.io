@@ -35,6 +35,7 @@ const Chat = () => {
       setLogged(true)
       console.log(user.displayName);
       console.log(logged);
+      console.log(user);
     } else {
       setLogged(false)
     }
@@ -48,7 +49,7 @@ const Chat = () => {
   return (
     <>
       {logged ? (
-        <ChatContainer userName={userName} />
+        <ChatContainer userName={userName} userPhoto={userPhoto}/>
       ) : (
         <>
         <h2 className='title'>El chat de Gastón y Shirley</h2>
