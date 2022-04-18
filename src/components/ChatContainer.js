@@ -9,23 +9,33 @@ const ChatContainer = (props) => {
   const [allMessages, setAllMessages] = useState([])
 
   const obtenerMensajes = async () => {
-    onGetMessages(() => {
-      getMessages()
+
+   await onGetMessages(() => {
+     getMessages()
         .then(res => {
           setAllMessages(res.docs.map(doc => doc.data()))
         })
     });
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    let username = props.userName
+    try {
+      let username = props.userName
     let time = Date.now();
-    message !== '' && setMessages({ message, time, username })
+    message !== '' && await setMessages({ message, time, username })
     setMessage('');
     obtenerMensajes()
+    } catch (error) {
+      console.error(error)
+    }
+    
   }
-  const handleLogout = () => {
-    logout()
+  const handleLogout = async () => {
+   try {
+     await logout()
+   } catch (error) {
+     console.error(error)
+   }
   }
   useEffect(() => {
     obtenerMensajes()
