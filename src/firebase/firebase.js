@@ -25,3 +25,4 @@ export const q = query(collection(db,'messages'), orderBy("time", "desc"));
 export const getMessages = () => getDocs(q);
 export const onGetMessages = (callback) => onSnapshot(q, callback);
 export const logout = () => signOut(auth);
+export const getQuestions = () => getDocs(collection(db, 'questions'));

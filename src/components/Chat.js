@@ -18,9 +18,8 @@ const Chat = () => {
     const signIn = async (googleProvider) => {
       try {
         const res = await signInWithPopup(auth, googleProvider);
-        console.log(res);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
     await signIn(googleProvider)
@@ -33,9 +32,6 @@ const Chat = () => {
       setUserPhoto(user.photoURL)
       setUserUid(user.uid)
       setLogged(true)
-      console.log(user.displayName);
-      console.log(logged);
-      console.log(user);
     } else {
       setLogged(false)
     }
@@ -43,7 +39,6 @@ const Chat = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, handleUserStateChanged);
-    console.log(logged);
   }, [])
 
   return (
